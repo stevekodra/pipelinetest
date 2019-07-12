@@ -4,7 +4,7 @@ def PATH= '/var/appvol/ortp/file_extracts/app-data-extracts'
 
 node ('') {
         stage ('SSH') {
-          sshagent(credentials: ['jenkins2']) {
+          sshagent(credentials: ['jenkins']) {
               script {
                       sh "ssh ${SSH_USER}@${HOST} cd ${PATH}"
           sh "whoami"
