@@ -6,7 +6,7 @@ node ('') {
         stage ('SSH') {
           sshagent(credentials: ['jenkins']) {
               script {
-                      sh "ssh --vvv ${SSH_USER}@${HOST}"
+                      sh "ssh -vvv ${SSH_USER}@${HOST}"
           sh "whoami"
         }
         stage('Cleaning Up'){
