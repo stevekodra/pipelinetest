@@ -2,7 +2,6 @@ def SSH_USER='jenkins'
 def HOST='34.68.166.16'
 def PATH= '/var/appvol/ortp/file_extracts/app-data-extracts'
 
-node ('Master') {
 
         stage ('SSH') {
           sshagent(credentials: ['jenkins']) {
@@ -14,4 +13,3 @@ node ('Master') {
         }
        }
     }
-  }
